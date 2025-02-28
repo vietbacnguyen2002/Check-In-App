@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors("*"));
 app.use(express.urlencoded({ extended: true }));
 
-app.use("",customerRoutes);
+app.use("/api/v1/customers",customerRoutes);
 
 app.use("/", (req, res) => {
     res.send("Welcome to Check-in API");
