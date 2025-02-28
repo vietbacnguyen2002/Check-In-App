@@ -12,6 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("",customerRoutes);
 
+app.use("/", (req, res) => {
+    res.send("Welcome to Check-in API");
+});
+
 server.listen(PORT, () => {
     connectToMongo();
     // generateFakeData();
